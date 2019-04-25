@@ -11,7 +11,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "wba": "webpack-bundle-analyzer --port 4200 build/asset-manifest.json"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,6 +26,10 @@
   "devDependencies": {
     "prop-types": "^15.7.2",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0"
+    "react-redux": "^7.0.2",
+    "react-router-dom": "^5.0.0",
+    "reselect": "^4.0.0",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.3.0"
   }
 }

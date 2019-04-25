@@ -1,0 +1,9 @@
+.random-planet {
+    display: flex;
+    background-color: #616161;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+.random-planet img{
+    margin-right: 2rem;
+}

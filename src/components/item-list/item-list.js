@@ -1,5 +1,5 @@
 import React from 'react';
-import './contacts.css';
+import './item-list.css';
 
 const Contacts = () => (
   <h1>Contacts Page</h1>
