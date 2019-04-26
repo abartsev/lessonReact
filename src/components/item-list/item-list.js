@@ -1,8 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react'
+import SwapiService from '../../services/swapi-service';
 import './item-list.css';
+import Spinner from '../spinner';
 
-const Contacts = () => (
-  <h1>Contacts Page</h1>
-);
+export default class ItemList extends Component {
+  swapiService = new SwapiService();
 
-export default Contacts;
+  state = {
+    peopleList: null
+  }
+
+  componentDidMount() {
+    this.swapiService.getAllPeople()
+      .then((peopleList) => this.setState({
+        peopleList
+      }))
+  }
+
+  render() {
+    const { peopleList } = this.state;
+
+    if (!peopleList)
+      return <Spinner />
+    return (
+      <ul>
+        {peopleList.map(elem =>
+          <li>{elem.name}</li>
+        )
+
+        }
+      </ul>
+    )
+  }
+}

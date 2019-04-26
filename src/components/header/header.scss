@@ -1,4 +1,19 @@
-.header ul{
-    display: flex;
-    list-style: none;
+@import '../../params.scss';
+
+.header{
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    ul{
+        display: flex;
+        list-style: none;
+        
+        li{
+            margin-right: 1rem;
+            display: inline-block;
+            & a:hover{
+                color: $primary-color;
+            }
+        }
+    }
 }
